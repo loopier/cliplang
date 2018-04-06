@@ -29,14 +29,14 @@ def convertType(value):
         except ValueError:
             return value
 
+# connect to Clip server
 ip = "127.0.0.1"
 port = 12345
-
 osc = udp_client.SimpleUDPClient(ip, port)
 
 # get individual messages
 messages = sys.argv[1].split('\n')
-# iterate messages
+# iterate messages and send them
 for m in messages:
     message = m.split(' ')
     command = message.pop(0)
@@ -50,4 +50,5 @@ for m in messages:
 
     osc.send_message(address, args)
     log.info("\n[OSC " + ip + ":" + str(port) + "] " + address + " " + str(args))
+
 sys.exit(0)
