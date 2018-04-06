@@ -40,9 +40,18 @@ messages = sys.argv[1].split('\n')
 for m in messages:
     message = m.split(' ')
     command = message.pop(0)
+    basecommand = "clip/"
+
     if len(command) == 0: continue # skip empty messages
-    if command == "wait": time.sleep(convertType(message[0]))
-    address = "/loopier/clip/clip/" + command
+    if command == "wait":
+        time.sleep(convertType(message[0]))
+    if command == "app" or command == "cv" or command == "syphon" or command == "clips" or command == "console":
+        basecommand = command +"/"
+        command = message[0]
+        message.pop()
+
+
+    address = "/loopier/clip/" + basecommand + command
     args = []
     for item in message:
         item = convertType(item)
