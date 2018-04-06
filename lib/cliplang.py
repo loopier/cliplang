@@ -11,6 +11,7 @@
 from pythonosc import udp_client
 import logging
 import sys
+import time
 
 # -- uncomment next line if you prefer debug log-level
 # logging.basicConfig(format='%(levelname)s:%(funcName)s: %(message)s\n', level=logging.DEBUG)
@@ -40,6 +41,7 @@ for m in messages:
     message = m.split(' ')
     command = message.pop(0)
     if len(command) == 0: continue # skip empty messages
+    if command == "wait": time.sleep(convertType(message[0]))
     address = "/loopier/clip/clip/" + command
     args = []
     for item in message:
