@@ -1,0 +1,20 @@
+{
+  "name": "cliplang",
+  "main": "./lib/cliplang",
+  "version": "0.0.0",
+  "description": "Atom package for ClipLang, a language for live coding videoclips",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "cliplang:toggle",
+    "atom-workspace": "cliplang:eval",
+    "atom-workspace": "cliplang:eval-multi-line"
+  },
+  "repository": "https://github.com/loopier/cliplang.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

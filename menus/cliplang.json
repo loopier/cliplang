@@ -1,0 +1,28 @@
+{
+  "context-menu": {
+    "atom-text-editor": []
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "ClipLang REPL",
+          "submenu": [
+            {
+              "label": "Boot ClipLang REPL",
+              "command": "cliplang:boot"
+            } ,
+            {
+              "label": "Eval",
+              "command": "cliplang:eval"
+            } , {
+              "label": "Eval Multi Line",
+              "command": "cliplang:eval-multi-line"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

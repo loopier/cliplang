@@ -1,0 +1,6 @@
+{
+  "atom-workspace atom-text-editor[data-grammar~='cliplang']": {
+    "shift-enter": "cliplang:eval",
+    "cmd-enter": "cliplang:eval-multi-line"
+  }
+}
